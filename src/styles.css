@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.125rem;
+    line-height: 1.4em;
+    font-weight: 300;
+    font-family: Arial;
+}
+
+
+.gpuText , .cpuText , .speedText , .motorText, .visionText , .sessionCountText , .sessionDateTimeText, .recipeText, .panelText, .leftCamText, .rightCamText{
+    font-size: 20px;
+    background-color: #1B2531;
+    font-weight: bold;
+    z-index: 2;
+}
+

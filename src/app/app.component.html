@@ -1,0 +1,359 @@
+<div class="containner">
+    <div class="navbar">
+        <h1>Navbar</h1>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <div class="machineDetails">
+        <div class="machineName">
+            <h4>{{ serverData.deviceId }}</h4>
+        </div>
+
+        <!-- <div class="machineInfo">
+      <div class="machineImg">
+        <img src="/assets/images/machine.webp" alt="machine">
+        <h4 [ngClass]="machineRunning ? 'machineRunning' : 'machineStop'">Running</h4>
+      </div>
+      <div class="machineSessionInfo">
+        <div>
+          <img src="/assets/logo/sessionCount.png" alt="sessionCount"/>
+          sessionCount : {{ serverData.sessionCount }}
+        </div>
+        <div>
+          <img src="/assets/logo/sessionDateTime.png" alt="sessionDateTime" />
+          {{ serverData.sDate + " " + serverData.sTime }}
+        </div>
+        <div>
+          <img src="/assets/logo/efficiency.png" alt="efficiency" />
+          efficiency : {{ serverData.Efficiency + "%"}}
+        </div>
+        <div>
+          <img src="/assets/logo/recipe.png" alt="recipe" />
+          recipe : {{ serverData.selectedRecipe }}
+        </div>
+      </div>
+    </div> -->
+    <div class="machine-top-data">
+        <app-machine-info
+            class="sessionCount"
+            [lable]="'Session Count'"
+            [lableClass]="'sessionCountText'"
+            [lableValue]="serverData.sessionCount"
+        />
+       
+        <app-machine-info
+            class="sessionDateTime"
+            [lable]="'Session Start time'"
+            [lableClass]="'sessionDateTimeText'"
+            [lableValue]="serverData.sDate + ' ' + serverData.sTime"
+        />
+        
+        <app-machine-info
+            class="efficiency"
+            [lable]="'Efficiency'"
+            [lableClass]="'efficiencyText'"
+            [lableValue]="serverData.Efficiency + '%'"
+        />
+        
+        <app-machine-info
+            class="recipe"
+            [lable]="'Recipe'"
+            [lableClass]="'recipeText'"
+            [lableValue]="serverData.selectedRecipe"
+        />
+    </div>
+        <div class="imgContainner">
+            <img
+                src="assets/images/real-suka.webp"
+                alt="abc"
+                class="suka"
+                loading="lazy"
+                #suka
+                (click)="getImageCord($event)"
+            />
+            <svg class="svgRes1">
+                conveyorSpeed
+                <polygon
+                    class="poly"
+                    points="110,103 254,61 370,110 365,211"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError' :conveyorSpeed > 7.12, 'machineStop': isStop }"
+                    (mouseenter)="showConveyorData(true)"
+                    (mouseleave)="showConveyorData(false)"
+                />
+                Cpu Temperature
+                <polygon
+                    class="poly"
+                    points="435,130 480,117 479,202 431,217"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError':cpuTemperature > 70, 'machineStop': isStop }"
+                    (mouseenter)="showCpuData(true)"
+                    (mouseleave)="showCpuData(false)"
+                />
+                Gpu Temperature
+                <polygon
+                    class="poly"
+                    points="487,115 530,103 529,188 484,200"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError':gpuTemperature > 70, 'machineStop': isStop }"
+                    (mouseenter)="showGpuData(true)"
+                    (mouseleave)="showGpuData(false)"
+                />
+                panel Temperature
+                <polygon
+                    class="poly"
+                    points="538,100 582,88 580,172 535,185"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError':panelTemperature > 75, 'machineStop': isStop }"
+                    (mouseenter)="showPanelData(true)"
+                    (mouseleave)="showPanelData(false)"
+                />
+                ejectedCount
+                <polygon
+                    class="poly"
+                    points="768,285 995,215 1037,232 806,301"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'machineStop': isStop}"
+                    (mouseenter)="showEjectedData(true)"
+                    (mouseleave)="showEjectedData(false)"
+                />
+                
+                rejectedCount
+                <polygon
+                    class="poly"
+                    points="687,254 910,186 967,203 746,275"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'machineStop': isStop}"
+                    (mouseenter)="showRejectedData(true)"
+                    (mouseleave)="showRejectedData(false)"
+                />
+                vision Temperature
+                <polygon
+                    class="poly"
+                    points="553,190 629,168 678,166 602,191"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError':visionTemperature > 80, 'machineStop': isStop }"
+                    (mouseenter)="showVisionData(true)"
+                    (mouseleave)="showVisionData(false)"
+                />
+                left-right camera
+                <polygon
+                    class="poly"
+                    points="653,161 731,140 777,141 690,162"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError': leftCameraTemperature > 65 || rightCameraTemperature > 65, 'machineStop': isStop }"
+                    (mouseenter)="showCamData(true)"
+                    (mouseleave)="showCamData(false)"
+                />
+                motor Ampere
+                <polygon
+                    class="poly"
+                    points="633,363 643,370 651,383 698,400 709,393 722,398 736,411 736,421 727,431 701,423 687,426 675,418 673,408 640,393 616,382 627,371"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError': motorAmpere > 7.12, 'machineStop': isStop }"
+                    (mouseenter)="showMotorData(true)"
+                    (mouseleave)="showMotorData(false)"
+                />
+            </svg>
+
+            <svg class="svgRes2">
+                conveyor
+                <polygon
+                    class="poly"
+                    points="154,38 224,67 221,128 67,63"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError' :conveyorSpeed > 7.12, 'machineStop': isStop }"
+                    (mouseenter)="showConveyorData(true)"
+                    (mouseleave)="showConveyorData(false)"
+                />
+                cpu
+                <polygon
+                    class="poly"
+                    points="262,79 290,71 288,124 260,131"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError':cpuTemperature > 70, 'machineStop': isStop }"
+                    (mouseenter)="showCpuData(true)"
+                    (mouseleave)="showCpuData(false)"
+                />
+                gpu
+                <polygon
+                    class="poly"
+                    points="293,69 321,62 319,115 292,122"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError':gpuTemperature > 70, 'machineStop': isStop }"
+                    (mouseenter)="showGpuData(true)"
+                    (mouseleave)="showGpuData(false)"
+                />
+                panel
+                <polygon
+                    class="poly"
+                    points="325,60 353,52 350,105 322,113"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError':visionTemperature > 80, 'machineStop': isStop }"
+                    (mouseenter)="showPanelData(true)"
+                    (mouseleave)="showPanelData(false)"
+                />
+                vision
+                <polygon
+                    class="poly"
+                    points="333,116 386,99 409,101 365,115"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError':panelTemperature > 75, 'machineStop': isStop }"
+                    (mouseenter)="showVisionData(true)"
+                    (mouseleave)="showVisionData(false)"
+                />
+                cam
+                <polygon
+                    class="poly"
+                    points="396,97 442,85 470,86 422,100"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError': leftCameraTemperature > 65 || rightCameraTemperature > 65, 'machineStop': isStop }"
+                    (mouseenter)="showCamData(true)"
+                    (mouseleave)="showCamData(false)"
+                />
+                eject
+                <polygon
+                    class="poly"
+                    points="462,172 600,130 627,141 489,181"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'machineStop': isStop}"
+                    (mouseenter)="showEjectedData(true)"
+                    (mouseleave)="showEjectedData(false)"
+                />
+                reject
+                <polygon
+                    class="poly"
+                    points="417,154 551,113 589,127 458,171"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'machineStop': isStop}"
+                    (mouseenter)="showRejectedData(true)"
+                    (mouseleave)="showRejectedData(false)"
+                />
+                motor
+                <polygon
+                    class="poly"
+                    points="374,225 383,219 391,223 393,230 422,242 430,237 435,243 444,248 446,255 439,260 425,254 412,257 409,247 391,237 385,238 375,233"
+                    fill="transparent"
+                    #poly
+                    [ngClass]="{'polyError': motorAmpere > 7.12, 'machineStop': isStop }"
+                    (mouseenter)="showMotorData(true)"
+                    (mouseleave)="showMotorData(false)"
+                />
+            </svg>
+            <!-- <div class="motorAlert"></div> -->
+            <img
+                src="/assets/images/img1.webp"
+                alt="imgRoll"
+                height="40px"
+                class="imgRoll1"
+                loading="lazy"
+                *ngIf="!isStop"
+            />
+            <img
+                src="/assets/images/img2.webp"
+                alt="imgRoll"
+                height="40px"
+                class="imgRoll2"
+                loading="lazy"
+                *ngIf="!isStop"
+            />
+            <img
+                src="/assets/images/img3.webp"
+                alt="imgRoll"
+                height="40px"
+                class="imgRoll3"
+                loading="lazy"
+                *ngIf="!isStop"
+            />
+            <img
+                src="/assets/images/img4.webp"
+                alt="imgRoll"
+                height="40px"
+                class="imgRoll4"
+                loading="lazy"
+                *ngIf="!isStop"
+            />
+            <div class="box" *ngIf="!isStop"></div>
+
+            <!-- <img src="/assets/img3.png" alt="imgRoll" height="75px" class="imgRoll3" /> -->
+            <div class="ejectCount" *ngIf="isEjectedHover && !isStop">EjectedCount-{{ ejectedCount }}</div>
+            <div class="ignoreCount" *ngIf="isRejectedHover && !isStop">RejectedCount-{{ rejectedCount }}</div>
+            <app-machine-info *ngIf="isConveyorHover && !isStop" 
+                class="conveyorSpeed"
+                [lable]="'Conveyor Speed'"
+                [lableClass]="'speedText'"
+                [lableValue]="conveyorSpeed + ' m/s'"
+                
+            />
+            <app-machine-info *ngIf="isCpuHover && !isStop"
+                class="cpuTemperature"
+                [lable]="'CPU Temp'"
+                [lableClass]="'cpuText'"
+                [lableValue]="cpuTemperature + '&deg;C'"
+            />
+            <app-machine-info *ngIf="isGpuHover && !isStop"
+                class="gpuTemperature"
+                [lable]="'GPU Temp'"
+                [lableClass]="'gpuText'"
+                [lableValue]="gpuTemperature + '&deg;C'"
+            />
+            <app-machine-info *ngIf="isVisionHover && !isStop"
+                class="visionTemperature"
+                [lable]="'Vision Temperature'"
+                [lableClass]="'visionText'"
+                [lableValue]="visionTemperature + '&deg;C'"
+            />
+            <app-machine-info *ngIf="isPanelHover && !isStop"
+                class="panelTemperature"
+                [lable]="'Panel Temperature'"
+                [lableClass]="'panelText'"
+                [lableValue]="panelTemperature + '&deg;C'"
+            />
+            <app-machine-info *ngIf="isCamHover && !isStop"
+                class="leftCamTemperature"
+                [lable]="'Left Cam Temperature'"
+                [lableClass]="'leftCamText'"
+                [lableValue]="leftCameraTemperature + '&deg;C'"
+            />
+            <app-machine-info *ngIf="isCamHover && !isStop"
+                class="rightCamTemperature"
+                [lable]="'Right Cam Temperature'"
+                [lableClass]="'rightCamText'"
+                [lableValue]="rightCameraTemperature + '&deg;C'"
+            />
+            
+            <app-machine-info *ngIf="isMotorHover && !isStop"
+                class="motorAmpere"
+                [lable]="'Motor Ampere'"
+                [lableClass]="'motorText'"
+                [lableValue]="motorAmpere + 'A'"
+            />
+            
+        </div>
+        <app-bottom-cards>
+            [conveyorSpeed] = "conveyorSpeed"
+            [cpuTemperature] = "cpuTemperature"
+            [gpuTemperature] ="gpuTemperature"
+            [isStop] = "isStop"
+        </app-bottom-cards>
+    </div>
+</div>
+
+

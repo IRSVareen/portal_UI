@@ -1,0 +1,28 @@
+.bottom-cards {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    visibility: hidden;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+}
+
+@media (max-width: 700px) {
+    .bottom-cards {
+        display: flex;
+        visibility: visible;
+    }
+}
