@@ -1,28 +1,116 @@
 .bottom-cards {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    position: relative;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.8);
     color: white;
     display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    visibility: hidden;
+    justify-content: center;
+    padding: 10px;
 }
 
-.card {
+.single-card {
+    width: 100%;
+    max-width: 800px; /* Ensures it doesn’t get too wide */
     background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 columns on small screens */
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.data-item {
+    background: rgba(255, 255, 255, 0.25); /* Make it stand out a bit more */
+    padding: 8px;
     border-radius: 5px;
     text-align: center;
-    width: 30%;
+    font-size: 14px; /* Ensure text is readable on small screens */
 }
 
-@media (max-width: 700px) {
-    .bottom-cards {
-        display: flex;
-        visibility: visible;
+.data-item img{
+    transition: box-shadow 0.3s ease-in-out;
+    
+}
+
+.errorGlow{
+    animation: error 3s ease-in-out 2s infinite ;
+}
+@keyframes error {
+    0%{
+        box-shadow: 0 0 5px red;
+        background-color: rgba(255, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+        background-color: rgba(255, 0, 0, 0.3);
     }
 }
+
+@media screen and (min-width:300px) and (max-width:500px) {
+    .bottom-cards {
+        position: relative; /* Keeps it in the normal document flow */
+        width: 100%;
+        height: 100%;
+        visibility: visible; /* Ensure it's visible */
+    }
+
+    .single-card {
+        width: 95%;
+        max-width: 350px; /* Limits the card width for readability */
+        background: rgba(255, 255, 255, 0.15); /* Slightly more visible */
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .data-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .data-item {
+        background: rgba(255, 255, 255, 0.25); /* Make it stand out a bit more */
+        padding: 8px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 14px; /* Ensure text is readable on small screens */
+    }
+
+    .data-item img{
+        transition: box-shadow 0.3s ease-in-out;
+        
+    }
+
+    .errorGlow{
+        animation: error 3s ease-in-out 2s infinite ;
+    }
+    @keyframes error {
+        0%{
+            box-shadow: 0 0 5px red;
+            background-color: rgba(255, 0, 0, 0.3);
+        }
+        50% {
+            box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+            background-color: rgba(255, 0, 0, 0.6);
+        }
+        100% {
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+            background-color: rgba(255, 0, 0, 0.3);
+        }
+    }
+}
+
+

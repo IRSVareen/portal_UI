@@ -1,14 +1,66 @@
-<div class="bottom-cards hidden" *ngIf="!isStop">
-    <div class="card">
-        <h4>Conveyor Speed</h4>
-        <p>{{ conveyorSpeed }} m/s</p>
-    </div>
-    <div class="card">
-        <h4>CPU Temp</h4>
-        <p>{{ cpuTemperature }}&deg;C</p>
-    </div>
-    <div class="card">
-        <h4>GPU Temp</h4>
-        <p>{{ gpuTemperature }}&deg;C</p>
+
+<div class="bottom-cards" *ngIf="!isStop">
+    <div class="card single-card">
+        <h4>Machine Data</h4>
+        <div class="data-grid">
+            <div class="data-item">
+                <p>Conveyor Speed</p>
+                <img src="/assets/images/conveyor-belt.png" 
+                height="40px" width="60px" class="conveyor"
+                [ngClass]="{'errorGlow': isErrorconveyor}"
+                />
+                <p>{{ conveyorSpeed }} m/s</p>
+            </div>
+            <div class="data-item">
+                <p>CPU Temp</p>
+                <img src="/assets/images/cpu.png" height="40px" width="60px" class="cpu"
+                [ngClass]="{'errorGlow': isErrorcpu}"
+                />
+                <p>{{ cpuTemperature }}°C</p>
+            </div>
+            <div class="data-item">
+                <p>GPU Temp</p>
+                <img src="/assets/images/gpu.png" height="40px" width="80px" class="gpu"
+                [ngClass]="{'errorGlow': isErrorgpu}"
+                />
+                <p>{{ gpuTemperature }}°C</p>
+            </div>
+            
+            <div class="data-item">
+                <p>Motor Ampere</p>
+                <img src="/assets/images/speed-test.png" height="40px" width="80px" class="motor"
+                [ngClass]="{'errorGlow': isErrormotor}"
+                />
+                <p>{{ motorAmpere }} A</p>
+            </div>
+            <div class="data-item">
+                <p>Vision Temp</p>
+                <img src="/assets/images/vision.png" height="40px" width="80px" class="vision"
+                [ngClass]="{'errorGlow': isErrorvision}"
+                />
+                <p>{{ visionTemperature }}°C</p>
+            </div>
+            <div class="data-item">
+                <p>Panel Temp</p>
+                <img src="/assets/images/panel.png" height="40px" width="80px" class="panel"
+                [ngClass]="{'errorGlow': isErrorpanel}"
+                />
+                <p>{{ panelTemperature }}°C</p>
+            </div>
+            <div class="data-item">
+                <p>Left Cam Temperature</p>
+                <img src="/assets/images/right-cam.png" height="40px" width="80px" class="leftcam"
+                [ngClass]="{'errorGlow': isErrorleftcam}"
+                />
+                <p>{{ leftCameraTemperature }}°C</p>
+            </div>
+            <div class="data-item">
+                <p>Right Cam Temperature</p>
+                <img src="/assets/images/left-cam.png" height="40px" width="80px" class="rightcam"
+                [ngClass]="{'errorGlow': isErrorrightcam}"
+                />
+                <p>{{ rightCameraTemperature }}°C</p>
+            </div>
+        </div>
     </div>
 </div>

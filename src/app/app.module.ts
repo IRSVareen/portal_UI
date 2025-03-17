@@ -10,7 +10,7 @@ import { BottomCardsComponent } from './components/bottom-cards/bottom-cards.com
   declarations: [
     AppComponent,
     MachineInfoComponent,
-    BottomCardsComponent
+    BottomCardsComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@ export class DataService {
     totalRejected: 2312,
     totalUnknown: 7800,
     deviceId: 'SUK-AL-V3-2.0-10044',
-    Efficiency: 24,
+    Efficiency: 94,
     sessionCount: 2,
     selectedRecipe: 'Recipe_1',
     sDate: '2025-02-19',
