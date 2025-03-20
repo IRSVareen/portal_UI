@@ -9,4 +9,5 @@ export class MachineInfoComponent {
     @Input() lableValue:any;
     @Input() lable:string = '';
     @Input() lableClass:string = '';
+    @Input() isStop: boolean = false;
 }

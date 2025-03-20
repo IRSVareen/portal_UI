@@ -9,9 +9,26 @@
 
 
  .sessionCountText , .sessionDateTimeText, .recipeText, .efficiencyText{
-    font-size: 20px;
+    font-size: 16px;
     background-color: #1B2531;
     font-weight: bold;
     z-index: 2;
 }
+.sessionCount p, .sessionDateTime p,.efficiency p, .recipe p{ 
+    font-size: 20px;
+}
 
+@media screen and (min-width:300px) and (max-width:500px){
+    .sessionCount p, .sessionDateTime p,.efficiency p, .recipe p{ 
+        font-size: 15px;
+    }
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
+    .speedText, .cpuText, .gpuText, .panelText, .visionText, .leftCamText, .motorText, .airPressureText{
+        font-size: 15px;
+    }
+    .conveyorSpeed p, .cpuTemperature p, .gpuTemperature p, .visionTemperature p, .panelTemperature p, .motorAmpere p, .airPressure p, .leftCamTemperature p{ 
+        font-size: 15px;
+    }
+}
