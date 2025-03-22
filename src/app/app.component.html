@@ -94,8 +94,8 @@
                     [ngClass]="{'polyWarning': cpuTemperature > 70 && cpuTemperature < 80,'polyError': cpuTemperature > 80, 'machineStop': isStop }"
                     (mouseenter)="showCpuData(true)" (mouseleave)="showCpuData(false)" />
                 <text x="430" y="260" fill="white" class="panelText">
-                    <tspan x="438" dy="18">Panel</tspan>
-                    <tspan x="450" dy="15">1</tspan>
+                    <tspan x="438" dy="18">Vison</tspan>
+                    <tspan x="438" dy="15">Panel</tspan>
                 </text>
 
                 Gpu Temperature
@@ -103,8 +103,8 @@
                     [ngClass]="{'polyWarning': gpuTemperature > 70 && gpuTemperature < 80,'polyError': gpuTemperature > 80, 'machineStop': isStop }"
                     (mouseenter)="showGpuData(true)" (mouseleave)="showGpuData(false)" />
                 <text x="480" y="236" fill="white" class="panelText">
-                    <tspan x="480" dy="18">Panel</tspan>
-                    <tspan x="492" dy="15">2</tspan>
+                    <tspan x="480" dy="18">Electric</tspan>
+                    <tspan x="480" dy="15">Panel</tspan>
                 </text>
                 panel Temperature
                 <polygon class="poly" points="523,198 564,181 564,245 526,265" fill="transparent" #poly
@@ -114,20 +114,20 @@
                     <tspan x="528" dy="18">Panel</tspan>
                     <tspan x="540" dy="15">3</tspan>
                 </text>
-                vision Temperature
+                right Temperature
                 <polygon class="poly" points="544,321 611,278 661,291 594,330" fill="transparent" #poly
-                    [ngClass]="{'polyWarning': visionTemperature > 70 && visionTemperature < 80, 'polyError':visionTemperature > 80, 'machineStop': isStop }"
-                    (mouseenter)="showVisionData(true)" (mouseleave)="showVisionData(false)" />
+                    [ngClass]="{'polyWarning': rightCameraTemperature > 65 && rightCameraTemperature < 80, 'polyError':rightCameraTemperature > 80, 'machineStop': isStop }"
+                    (mouseenter)="showRightCamData(true)" (mouseleave)="showRightCamData(false)" />
                 <text x="578" y="290" fill="white" class="panelText">
-                    <tspan x="578" dy="18">Left</tspan>
+                    <tspan x="578" dy="18">Right</tspan>
                     <tspan x="570" dy="15">Vision</tspan>
                 </text>
-                left-right camera
+                left camera
                 <polygon class="poly" points="625,271 698,231 743,239 676,282" fill="transparent" #poly
-                    [ngClass]="{'polyWarning': leftCameraTemperature > 65 && leftCameraTemperature < 80 || rightCameraTemperature > 65 && rightCameraTemperature < 80, 'polyError': leftCameraTemperature > 80 || rightCameraTemperature > 80,'machineStop': isStop }"
-                    (mouseenter)="showCamData(true)" (mouseleave)="showCamData(false)" />
+                    [ngClass]="{'polyWarning': leftCameraTemperature > 65 && leftCameraTemperature < 80, 'polyError': leftCameraTemperature > 80 ,'machineStop': isStop }"
+                    (mouseenter)="showLeftCamData(true)" (mouseleave)="showLeftCamData(false)" />
                 <text x="670" y="230" fill="white" class="panelText">
-                    <tspan x="670" dy="18">Right</tspan>
+                    <tspan x="670" dy="18">Left</tspan>
                     <tspan x="670" dy="15">Vision</tspan>
                 </text>
                 motor Ampere
@@ -160,39 +160,39 @@
                     [ngClass]="{'polyWarning': cpuTemperature > 70 && cpuTemperature < 80,'polyError': cpuTemperature > 80, 'machineStop': isStop }"
                     (mouseenter)="showCpuData(true)" (mouseleave)="showCpuData(false)" />
                 <text x="285" y="170" fill="white" class="panelText">
-                    <tspan x="285" dy="18">Panel</tspan>
-                    <tspan x="295" dy="15">1</tspan>
+                    <tspan x="285" dy="18">Vsion</tspan>
+                    <tspan x="285" dy="15">Panel</tspan>
                 </text>
                 Gpu Temperature
                 <polygon class="poly" points="317,152 343,137 343,175 319,189" fill="transparent" #poly
                     [ngClass]="{'polyWarning': gpuTemperature > 70 && gpuTemperature < 80,'polyError': gpuTemperature > 80, 'machineStop': isStop }"
                     (mouseenter)="showGpuData(true)" (mouseleave)="showGpuData(false)" />
                 <text x="315" y="154" fill="white" class="panelText">
-                    <tspan x="315" dy="18">Panel</tspan>
-                    <tspan x="325" dy="15">2</tspan>
+                    <tspan x="315" dy="18">Electric</tspan>
+                    <tspan x="315" dy="15">Panel</tspan>
                 </text>
                 panel Temperature
                 <polygon class="poly" points="346,135 372,121 372,159 346,175" fill="transparent" #poly
                     [ngClass]="{'polyWarning': panelTemperature > 70 && panelTemperature < 75,'polyError':panelTemperature > 75, 'machineStop': isStop }"
                     (mouseenter)="showPanelData(true)" (mouseleave)="showPanelData(false)" />
-                <text x="345" y="137" fill="white" class="panelText">
+                <text x="345" y="130" fill="white" class="panelText">
                     <tspan x="344" dy="18">Panel</tspan>
                     <tspan x="355" dy="15">3</tspan>
                 </text>
-                vision Temperature
+                right Temperature
                 <polygon class="poly" points="358,210 403,185 435,192 391,218" fill="transparent" #poly
-                    [ngClass]="{'polyWarning': visionTemperature > 70 && visionTemperature < 80, 'polyError':visionTemperature > 80, 'machineStop': isStop }"
-                    (mouseenter)="showVisionData(true)" (mouseleave)="showVisionData(false)" />
+                    [ngClass]="{'polyWarning': rightCameraTemperature > 65 && rightCameraTemperature < 80, 'polyError':rightCameraTemperature > 80, 'machineStop': isStop }"
+                    (mouseenter)="showRightCamData(true)" (mouseleave)="showRightCamData(false)" />
                 <text x="390" y="180" fill="white" class="panelText">
-                    <tspan x="390" dy="18">Left</tspan>
+                    <tspan x="390" dy="18">Right</tspan>
                     <tspan x="380" dy="15">Vision</tspan>
                 </text>
-                left-right camera
+                left camera
                 <polygon class="poly" points="416,179 457,154 493,160 448,187" fill="transparent" #poly
-                    [ngClass]="{'polyWarning': leftCameraTemperature > 65 && leftCameraTemperature < 80 || rightCameraTemperature > 65 && rightCameraTemperature < 80, 'polyError': leftCameraTemperature > 80 || rightCameraTemperature > 80,'machineStop': isStop }"
-                    (mouseenter)="showCamData(true)" (mouseleave)="showCamData(false)" />
+                    [ngClass]="{'polyWarning': leftCameraTemperature > 65 && leftCameraTemperature < 80 , 'polyError': leftCameraTemperature > 80 ,'machineStop': isStop }"
+                    (mouseenter)="showLeftCamData(true)" (mouseleave)="showLeftCamData(false)" />
                 <text x="450" y="150" fill="white" class="panelText">
-                    <tspan x="446" dy="18">Right</tspan>
+                    <tspan x="446" dy="18">Left</tspan>
                     <tspan x="440" dy="15">Vision</tspan>
                 </text>
                 motor Ampere
@@ -233,14 +233,14 @@
                 <polygon class="poly" points="222,84 239,76 239,104 222,112" fill="transparent" #poly
                     [ngClass]="{'polyWarning': panelTemperature > 70 && panelTemperature < 75,'polyError':panelTemperature > 75, 'machineStop': isStop }"
                     (mouseenter)="showPanelData(true)" (mouseleave)="showPanelData(false)" />
-                vision Temperature
+                right Temperature
                 <polygon class="poly" points="227,136 256,118 279,122 250,138" fill="transparent" #poly
-                    [ngClass]="{'polyWarning': visionTemperature > 70 && visionTemperature < 80, 'polyError':visionTemperature > 80, 'machineStop': isStop }"
-                    (mouseenter)="showVisionData(true)" (mouseleave)="showVisionData(false)" />
-                left-right camera
+                    [ngClass]="{'polyWarning': rightCameraTemperature > 65 && rightCameraTemperature < 80, 'polyError':rightCameraTemperature > 80, 'machineStop': isStop }"
+                    (mouseenter)="showRightCamData(true)" (mouseleave)="showRightCamData(false)" />
+                left camera
                 <polygon class="poly" points="265,114 297,94 318,101 286,119" fill="transparent" #poly
-                    [ngClass]="{'polyWarning': leftCameraTemperature > 65 && leftCameraTemperature < 80 || rightCameraTemperature > 65 && rightCameraTemperature < 80, 'polyError': leftCameraTemperature > 80 || rightCameraTemperature > 80,'machineStop': isStop }"
-                    (mouseenter)="showCamData(true)" (mouseleave)="showCamData(false)" />
+                    [ngClass]="{'polyWarning': leftCameraTemperature > 65 && leftCameraTemperature < 80, 'polyError': leftCameraTemperature > 80,'machineStop': isStop }"
+                    (mouseenter)="showLeftCamData(true)" (mouseleave)="showLeftCamData(false)" />
                 motor Ampere
                 <polygon class="poly" points="341,143 346,133 369,149 371,159 356,165 353,153" fill="transparent" #poly
                     [ngClass]="{'polyWarning':motorAmpere > 6.00 && motorAmpere < 7.12,'polyError': motorAmpere > 7.12, 'machineStop': isStop }"
@@ -271,10 +271,10 @@
                     [ngClass]="{'polyWarningDot': panelTemperature > 70 && panelTemperature < 75,'polyErrorDot':panelTemperature > 75, 'machineStop': isStop }">
                 </div>
                 <div class="visionDot"
-                    [ngClass]="{'polyWarningDot': visionTemperature > 70 && visionTemperature < 80, 'polyErrorDot':visionTemperature > 80, 'machineStop': isStop }">
+                    [ngClass]="{'polyWarningDot': rightCameraTemperature > 65 && rightCameraTemperature < 80, 'polyErrorDot':rightCameraTemperature > 80, 'machineStop': isStop }">
                 </div>
                 <div class="cameraDot"
-                    [ngClass]="{'polyWarningDot': leftCameraTemperature > 65 && leftCameraTemperature < 80 || rightCameraTemperature > 65 && rightCameraTemperature < 80, 'polyErrorDot': leftCameraTemperature > 80 || rightCameraTemperature > 80,'machineStop': isStop }">
+                    [ngClass]="{'polyWarningDot': leftCameraTemperature > 65 && leftCameraTemperature < 80 , 'polyErrorDot': leftCameraTemperature > 80 ,'machineStop': isStop }">
                 </div>
                 <div class="airPressureDot"
                     [ngClass]="{'polyWarningDot':airPressure > 7.40 && airPressure < 8.00,'polyErrorDot': airPressure > 8.00 || airPressure < 4.00, 'machineStop': isStop }">
@@ -330,25 +330,25 @@
             </svg> -->
 
             <svg class="svgRes3">
-                conveyor
+                <!-- conveyor
                 <polygon class="poly" points="31,42 71,20 126,48 106,63 104,84" fill="transparent" #poly
                     [ngClass]="{'polyWarning': conveyorSpeed > 4.01 && conveyorSpeed < 7.12,'polyError' :conveyorSpeed > 7.12, 'machineStop': isStop }"
                     (mouseenter)="showConveyorData(true)" (mouseleave)="showConveyorData(false)" />
                 cpu
                 <polygon class="poly" points="123,71 135,65 135,85 123,90" fill="transparent" #poly
-                    [ngClass]="{'polyWarning': cpuTemperature > 70 && cpuTemperature < 80,'polyError':cpuTemperature > 70, 'machineStop': isStop }"
+                    [ngClass]="{'polyWarning': cpuTemperature > 70 && cpuTemperature < 80,'polyError':cpuTemperature > 80,'machineStop': isStop }"
                     (mouseenter)="showCpuData(true)" (mouseleave)="showCpuData(false)" />
                 gpu
                 <polygon class="poly" points="136,65 148,58 147,76 137,83" fill="transparent" #poly
-                    [ngClass]="{'polyWarning': gpuTemperature > 70 && gpuTemperature < 80,'polyError':gpuTemperature > 70, 'machineStop': isStop }"
+                    [ngClass]="{'polyWarning': gpuTemperature > 70 && gpuTemperature < 80,'polyError':gpuTemperature > 80, 'machineStop': isStop }"
                     (mouseenter)="showGpuData(true)" (mouseleave)="showGpuData(false)" />
                 panel
                 <polygon class="poly" points="149,56 160,49 161,70 150,76" fill="transparent" #poly
-                    [ngClass]="{'polyWarning': panelTemperature > 70 && panelTemperature < 75,'polyError':visionTemperature > 80, 'machineStop': isStop }"
+                    [ngClass]="{'polyWarning': panelTemperature > 70 && panelTemperature < 75,'polyError':visionTemperature > 75, 'machineStop': isStop }"
                     (mouseenter)="showPanelData(true)" (mouseleave)="showPanelData(false)" />
                 vision
                 <polygon class="poly" points="154,91 173,79 188,83 168,95" fill="transparent" #poly
-                    [ngClass]="{'polyWarning': visionTemperature > 70 && visionTemperature < 80, 'polyError':panelTemperature > 75, 'machineStop': isStop }"
+                    [ngClass]="{'polyWarning': visionTemperature > 70 && visionTemperature < 80, 'polyError':panelTemperature > 80, 'machineStop': isStop }"
                     (mouseenter)="showVisionData(true)" (mouseleave)="showVisionData(false)" />
                 cam
                 <polygon class="poly" points="177,77 196,65 212,69 193,80" fill="transparent" #poly
@@ -356,13 +356,13 @@
                     (mouseenter)="showCamData(true)" (mouseleave)="showCamData(false)" />
                 motor
                 <polygon class="poly" points="228,89 249,99 242,108 226,96" fill="transparent" #poly
-                    [ngClass]="{'polyWarning':motorAmpere >6.00 && motorAmpere<7.12,'polyError': motorAmpere > 7.12, 'machineStop': isStop }"
+                    [ngClass]="{'polyWarning':motorAmpere >6.00 && motorAmpere < 7.12,'polyError': motorAmpere > 7.12, 'machineStop': isStop }"
                     (mouseenter)="showMotorData(true)" (mouseleave)="showMotorData(false)" />
                 Air Pressure
                 <polygon class="poly" points="142,125 143,121 149,122 151,126 152,132 146,132 140,131"
                     fill="transparent" #poly
-                    [ngClass]="{'polyWarning':airPressure > 7.40 && airPressure<8.00,'polyError': airPressure > 8.00 || airPressure < 4.00, 'machineStop': isStop }"
-                    (mouseenter)="showAirPressureData(true)" (mouseleave)="showAirPressureData(false)" />
+                    [ngClass]="{'polyWarning':airPressure > 7.40 && airPressure <8.00,'polyError': airPressure > 8.00 || airPressure < 4.00, 'machineStop': isStop }"
+                    (mouseenter)="showAirPressureData(true)" (mouseleave)="showAirPressureData(false)" /> -->
                 svgObject
                 <polygon points="209,174 209,166 262,132 260,144" fill="grey" />
                 <polygon points="192,169 192,150 237,180 238,198" fill="grey" />
@@ -394,61 +394,70 @@
             <div class="nonFiredCount" *ngIf="isRejectedHover && !isStop">NonFired-{{ rejectedCount }}</div>
             <app-machine-info *ngIf="isConveyorHover && !isStop" class="conveyorSpeed" [lable]="'Conveyor Speed'"
                 [lableClass]="'speedText'" [lableValue]="conveyorSpeed + ' m/s'" />
-            <!-- <div class="conveyorIcon1" >
-                <img alt="conveyor-belt" [src]="getConveyorImage()" class="imgConveyor"/>
-                <span class="icon-heading">Conveyor</span>
-            </div> -->
+            <div class="conveyorIcon" >
+                <!-- <img alt="conveyor-belt" [src]="getConveyorImage()" class="imgConveyor"/> -->
+                <img *ngIf="getWarningErrorConveyorImage() && !isStop" [src]="getWarningErrorConveyorImage()" class="imgConveyor" 
+                [ngClass]="{ 'iconWarning': !isStop && conveyorSpeed > 4.01 && conveyorSpeed < 7.12, 'iconError': !isStop && conveyorSpeed > 7.12}"/>
+                <span class="icon-heading" *ngIf="getWarningErrorConveyorImage() && !isStop">Conveyor</span>
+            </div>
             <app-machine-info *ngIf="isCpuHover && !isStop" class="cpuTemperature" [lable]="'Panel Box 1'"
                 [lableClass]="'cpuText'" [lableValue]="cpuTemperature + '&deg;C'" />
-            <!-- <div class="cpuIcon1" >
-                <img alt="cpu" [src]="getCpuImage()" class="imgCpu" />
-                <span class="icon-heading">CPU</span>
-            </div> -->
+            <div class="cpuIcon" >
+                <img *ngIf="getWarningErrorCpuImage() && !isStop" [src]="getWarningErrorCpuImage()" class="imgCpu" 
+                [ngClass]="{ 'iconWarning': !isStop && cpuTemperature > 70 && cpuTemperature < 80, 'iconError': !isStop && cpuTemperature > 80 }"/>
+                <span class="icon-heading" *ngIf="getWarningErrorCpuImage() && !isStop">CPU</span>
+            </div>
             <app-machine-info *ngIf="isGpuHover && !isStop" class="gpuTemperature" [lable]="'Panel Box 2'"
                 [lableClass]="'gpuText'" [lableValue]="gpuTemperature + '&deg;C'" />
-            <!-- <div class="gpuIcon1" >
-                <img alt="gpu" [src]="getGpuImage()" class="imgGpu" />
-                <span class="icon-heading">GPU</span>
-            </div> -->
-            <app-machine-info *ngIf="isVisionHover && !isStop" class="visionTemperature"
+            <div class="gpuIcon" >
+                <img *ngIf="getWarningErrorGpuImage() && !isStop" [src]="getWarningErrorGpuImage()" class="imgGpu" 
+                [ngClass]="{ 'iconWarning': !isStop && gpuTemperature > 70 && gpuTemperature < 80, 'iconError': !isStop && gpuTemperature > 80}"/>
+                <span class="icon-heading" *ngIf="getWarningErrorGpuImage() && !isStop">GPU</span>
+            </div>
+            <!-- <app-machine-info *ngIf="isCamRightHover && !isStop" class="visionTemperature"
                 [lable]="'Right Vision Temperature'" [lableClass]="'visionText'"
-                [lableValue]="visionTemperature + '&deg;C'" />
-            <!-- <div class="visionIcon1" >
+                [lableValue]="visionTemperature + '&deg;C'" /> -->
+            <!-- <div class="visionIcon" >
                 <img alt="vision" [src]="getVisionImage()" class="imgVision"/>
                 <span class="icon-heading">Vision</span>
             </div> -->
             <app-machine-info *ngIf="isPanelHover && !isStop" class="panelTemperature" [lable]="'Panel Box 3'"
                 [lableClass]="'panelText'" [lableValue]="panelTemperature + '&deg;C'" />
-            <!-- <div class="panelIcon1" >
-                <img alt="panel" [src]="getPanelImage()" class="imgPanel"/>
-                <span class="icon-heading">Panel</span>
-            </div> -->
-            <app-machine-info *ngIf="isCamHover && !isStop" class="leftCamTemperature"
+            <div class="panelIcon" >
+                <img *ngIf="getWarningErrorPanelImage() && !isStop" [src]="getWarningErrorPanelImage()" class="imgPanel"
+                [ngClass]="{ 'iconWarning': !isStop && panelTemperature > 70 && panelTemperature < 75, 'iconError': !isStop && panelTemperature > 75 }"/>
+                <span class="icon-heading" *ngIf="getWarningErrorPanelImage() && !isStop">Panel</span>
+            </div>
+            <app-machine-info *ngIf="isCamLeftHover && !isStop" class="leftCamTemperature"
                 [lable]="'Left Vision Temperature'" [lableClass]="'leftCamText'"
                 [lableValue]="leftCameraTemperature + '&deg;C'" />
-            <!-- <div class="leftCamIcon1" >
-                <img alt="leftCamera" [src]="getLeftCamImage()" class="imgCam" />
-                <span class="icon-heading">Left Cam</span>
-            </div> -->
-            <!-- <app-machine-info *ngIf="isCamHover && !isStop" class="rightCamTemperature"
-                [lable]="'Right Cam Temperature'" [lableClass]="'rightCamText'"
-                [lableValue]="rightCameraTemperature + '&deg;C'" /> -->
-            <!-- <div class="rightCamIcon1" >
-                <img alt="rightCamera" [src]="getRightCamImage()" class="rightSide imgCam"/>
-                <span class="icon-heading">Right Cam</span>
-            </div> -->
+            <div class="leftCamIcon" >
+                <img *ngIf="getWarningErrorLeftCamImage() && !isStop" [src]="getWarningErrorLeftCamImage()" class="imgCam" 
+                [ngClass]="{ 'iconWarning': !isStop && leftCameraTemperature > 65 && leftCameraTemperature < 80, 'iconError': !isStop && leftCameraTemperature > 80}"/>
+                <span class="icon-heading" *ngIf="getWarningErrorLeftCamImage() && !isStop">Left Vision</span>
+            </div>
+            <app-machine-info *ngIf="isCamRightHover && !isStop" class="rightCamTemperature"
+                [lable]="'Right VisionTemperature'" [lableClass]="'rightCamText'"
+                [lableValue]="rightCameraTemperature + '&deg;C'" />
+            <div class="rightCamIcon" >
+                <img *ngIf="getWarningErrorRightCamImage() && !isStop" [src]="getWarningErrorRightCamImage()" class="rightSide imgCam"
+                [ngClass]="{ 'iconWarning': !isStop && rightCameraTemperature > 65 && rightCameraTemperature < 80, 'iconError': !isStop && rightCameraTemperature > 80}"/>
+                <span class="icon-heading" *ngIf="getWarningErrorRightCamImage() && !isStop">Right Vision</span>
+            </div>
             <app-machine-info *ngIf="isMotorHover && !isStop" class="motorAmpere" [lable]="'Motor Ampere'"
                 [lableClass]="'motorText'" [lableValue]="motorAmpere + 'A'" />
-            <!-- <div class="motorIcon1" >
-                <img alt="motor" [src]="getMotorImage()" class="imgMotor" />
-                <span class="icon-heading">Motor</span>
-            </div> -->
+            <div class="motorIcon" >
+                <img *ngIf="getWarningErrorMotorImage() && !isStop" [src]="getWarningErrorMotorImage()" class="imgMotor" 
+                [ngClass]="{ 'iconWarning': !isStop && motorAmpere > 6.00 && motorAmpere < 7.12, 'iconError': !isStop && motorAmpere > 7.12}"/>
+                <span class="icon-heading" *ngIf="getWarningErrorMotorImage() && !isStop">Motor</span>
+            </div>
             <app-machine-info *ngIf="isAirPressureHover && !isStop" class="airPressure" [lable]="'Air Pressure'"
                 [lableClass]="'airPressureText'" [lableValue]="airPressure + 'bar'" />
-            <!-- <div class="airPressureIcon1" >
-                <img alt="motor" [src]="getAirPressureImage()" class="imgAirPressure"/>
-                <span class="icon-heading">Air Pressure</span>
-            </div> -->
+            <div class="airPressureIcon" >
+                <img *ngIf="getWarningErrorAirImage() && !isStop" [src]="getWarningErrorAirImage()" class="imgAirPressure"
+                [ngClass]="{ 'iconWarning': !isStop && airPressure > 7.40 && airPressure < 8.00, 'iconError': !isStop && airPressure > 8.00 || airPressure < 4.00 }"/>
+                <span class="icon-heading" *ngIf="getWarningErrorAirImage() && !isStop">Air Pressure</span>
+            </div>
             <!-- <div class="eject-reject">
                 <div class="eject">
                     <img src="/assets/icons/count.png" height="40px" width="40px"
@@ -523,33 +532,39 @@
         </div>
         
         <div class="iconsFinal">
-            <div class="cpuIcon1" >
-                <img alt="cpu" [src]="getCpuImage()" class="imgCpu" />
-                <span class="icon-heading">Panel 1</span>
+            <div class="cpuIcon1">
+                <img alt="cpu" [src]="getCpuImage()" class="imgCpu" 
+                [ngClass]="{ 'iconWarning': !isStop && cpuTemperature > 70 && cpuTemperature < 80, 'iconError': !isStop && cpuTemperature > 80 }"/>
+                <span class="icon-heading">Vision Panel</span>
                 <p *ngIf="!isStop">{{cpuTemperature}}&deg;C</p>
             </div>
             <div class="gpuIcon1">
-                <img alt="gpu" [src]="getGpuImage()" class="imgGpu" />
-                <span class="icon-heading">Panel 2</span>
+                <img alt="gpu" [src]="getGpuImage()" class="imgGpu" 
+                [ngClass]="{ 'iconWarning': !isStop && gpuTemperature > 70 && gpuTemperature < 80, 'iconError': !isStop && gpuTemperature > 80}"/>
+                <span class="icon-heading">Electric Panel</span>
                 <p *ngIf="!isStop">{{gpuTemperature}}&deg;C</p>
             </div>
             <div class="panelIcon1" >
-                <img alt="panel" [src]="getPanelImage()" class="imgPanel"/>
+                <img alt="panel" [src]="getPanelImage()" class="imgPanel"
+                [ngClass]="{ 'iconWarning': !isStop && panelTemperature > 70 && panelTemperature < 75, 'iconError': !isStop && panelTemperature > 75 }"/>
                 <span class="icon-heading">Panel 3</span>
                 <p *ngIf="!isStop">{{panelTemperature}}&deg;C</p>
             </div>
             <div class="motorIcon1">
-                <img alt="motor" [src]="getMotorImage()" class="imgMotor"/>
+                <img alt="motor" [src]="getMotorImage()" class="imgMotor"
+                [ngClass]="{ 'iconWarning': !isStop && motorAmpere > 6.00 && motorAmpere < 7.12, 'iconError': !isStop && motorAmpere > 7.12}"/>
                 <span class="icon-heading">Motor</span>
                 <p *ngIf="!isStop">{{motorAmpere}}A</p>
             </div>
             <div class="conveyorIcon1" >
-                <img alt="conveyor-belt" [src]="getConveyorImage()" class="imgConveyor"/>
+                <img alt="conveyor-belt" [src]="getConveyorImage()" class="imgConveyor"
+                [ngClass]="{ 'iconWarning': !isStop && conveyorSpeed > 4.01 && conveyorSpeed < 7.12, 'iconError': !isStop && conveyorSpeed > 7.12}"/>
                 <span class="icon-heading">Conveyor</span>
                 <p *ngIf="!isStop">{{conveyorSpeed}}m/s</p>
             </div>
             <div class="leftCamIcon1">
-                <img alt="leftCamera" [src]="getLeftCamImage()" class="imgCam"/>
+                <img alt="leftCamera" [src]="getLeftCamImage()" class="imgCam"
+                [ngClass]="{ 'iconWarning': !isStop && leftCameraTemperature > 65 && leftCameraTemperature < 80, 'iconError': !isStop && leftCameraTemperature > 80}"/>
                 <span class="icon-heading">Left Vision</span>
                 <p  *ngIf="!isStop">{{leftCameraTemperature}}&deg;C</p>
             </div>
@@ -559,12 +574,14 @@
                 <p *ngIf="!isStop">{{visionTemperature}}&deg;C</p>
             </div> -->
             <div class="rightCamIcon1" >
-                <img alt="rightCamera" [src]="getVisionImage()" class="rightSide imgCam"/>
+                <img alt="rightCamera" [src]="getRightCamImage()" class="rightSide imgCam"
+                [ngClass]="{ 'iconWarning': !isStop && rightCameraTemperature > 65 && rightCameraTemperature < 80, 'iconError': !isStop && rightCameraTemperature > 80}"/>
                 <span class="icon-heading">Right Vision</span>
-                <p *ngIf="!isStop">{{visionTemperature}}</p>
+                <p *ngIf="!isStop">{{rightCameraTemperature}}&deg;C</p>
             </div>
             <div class="airPressureIcon1">
-                <img alt="motor" [src]="getAirPressureImage()" class="imgAirPressure"/>
+                <img alt="motor" [src]="getAirPressureImage()" class="imgAirPressure"
+                [ngClass]="{ 'iconWarning': !isStop && airPressure > 7.40 && airPressure < 8.00, 'iconError': !isStop && airPressure > 8.00 || airPressure < 4.00 }"/>
                 <span class="icon-heading">Air Pressure</span>
                 <p *ngIf="!isStop">{{airPressure}}bar</p>
             </div>

@@ -30,9 +30,9 @@ export class AppComponent implements AfterViewInit {
   isConveyorHover = false;
   isCpuHover = false;
   isGpuHover = false;
-  isVisionHover = false;
+  isCamRightHover = false;
   isPanelHover = false;
-  isCamHover = false;
+  isCamLeftHover = false;
   isMotorHover = false;
   isAirPressureHover = false;
   isEjectedHover = false;
@@ -110,11 +110,11 @@ export class AppComponent implements AfterViewInit {
   showPanelData(show: boolean) {
     this.isPanelHover = show;
   }
-  showVisionData(show: boolean) {
-    this.isVisionHover = show;
+  showRightCamData(show: boolean) {
+    this.isCamRightHover = show;
   }
-  showCamData(show: boolean) {
-    this.isCamHover = show;
+  showLeftCamData(show: boolean) {
+    this.isCamLeftHover = show;
   }
   showMotorData(show: boolean) {
     this.isMotorHover = show;
@@ -197,6 +197,7 @@ export class AppComponent implements AfterViewInit {
     }
     return '/assets/icons/conveyor-belt-running.png';
   }
+  
 
   getCpuImage() {
     if (this.isStop) {
@@ -210,6 +211,7 @@ export class AppComponent implements AfterViewInit {
     }
     return '/assets/icons/cpu-running.png';
   }
+
 
   getGpuImage() {
     if (this.isStop) {
@@ -300,5 +302,71 @@ export class AppComponent implements AfterViewInit {
       return '/assets/icons/air-error.png';
     }
     return '/assets/icons/air-running.png';
+  }
+
+  getWarningErrorConveyorImage(): string | null {
+    if (this.conveyorSpeed > 4.01 && this.conveyorSpeed < 7.12) {
+        return '/assets/icons/conveyor-warning.png';  
+    } 
+    if (this.conveyorSpeed > 7.12 || this.conveyorSpeed < 2.99) {
+        return '/assets/icons/conveyor-error.png'; 
+    }
+    return null;
+  }
+  getWarningErrorCpuImage(): string | null{
+    if (this.cpuTemperature > 70 && this.cpuTemperature < 80) {
+      return '/assets/icons/cpu-warning.png';
+    } else if (this.cpuTemperature > 80) {
+      return '/assets/icons/cpu-temp-error.png';
+    }
+    return null;
+  }
+  getWarningErrorGpuImage(){
+    if (this.gpuTemperature > 70 && this.gpuTemperature < 80) {
+      return '/assets/icons/gpu-warning.png';
+    } else if (this.gpuTemperature > 80) {
+      return '/assets/icons/gpu-temp-error.png';
+    }
+    return null;
+  }
+  getWarningErrorPanelImage(){
+    if (this.panelTemperature > 70 && this.panelTemperature < 75) {
+      return '/assets/icons/panel-warning.png';
+    } else if (this.panelTemperature > 75) {
+      return '/assets/icons/panel-error.png';
+    }
+    return null;
+  }
+  getWarningErrorLeftCamImage(){
+    if (this.leftCameraTemperature > 65 && this.leftCameraTemperature < 80) {
+      return '/assets/icons/left-cam-warning.png';
+    } else if (this.leftCameraTemperature > 80) {
+      return '/assets/icons/left-cam-error.png';
+    }
+    return null;
+  }
+  getWarningErrorRightCamImage(){
+    if (this.rightCameraTemperature > 65 && this.rightCameraTemperature < 80) {
+      return '/assets/icons/left-cam-warning.png';
+    } else if (this.rightCameraTemperature > 80) {
+      return '/assets/icons/left-cam-error.png';
+    }
+    return null;
+  }
+  getWarningErrorMotorImage(){
+    if (this.motorAmpere > 6.0 && this.motorAmpere < 7.12) {
+      return '/assets/icons/motor-warning.png';
+    } else if (this.motorAmpere > 7.12) {
+      return '/assets/icons/motor-error.png';
+    }
+    return null;
+  }
+  getWarningErrorAirImage(){
+    if (this.airPressure > 7.4 && this.airPressure < 8.0) {
+      return '/assets/icons/air-warning.png';
+    } else if (this.airPressure > 8.0 || this.airPressure < 4.0) {
+      return '/assets/icons/air-error.png';
+    }
+    return null;
   }
 }

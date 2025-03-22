@@ -32,10 +32,11 @@
     z-index: 3;
 }
 
-.imgRoll7{
+.imgRoll7 {
     animation-delay: 1s;
 }
-.imgRoll8{
+
+.imgRoll8 {
     animation-delay: 4s;
     left: 150px;
     top: 105px;
@@ -47,9 +48,12 @@
     left: 155px;
     top: 145px;
 }
-.efficiency, .recipe{
+
+.efficiency,
+.recipe {
     height: 100%;
 }
+
 .firedCount,
 .nonFiredCount,
 .cpuTemperature,
@@ -70,11 +74,11 @@
     text-align: center;
 }
 
-.polygonText{
+.polygonText {
     rotate: -30deg;
 }
 
-.panelText tspan{
+.panelText tspan {
     font-size: small;
 }
 
@@ -118,7 +122,7 @@
     height: 117px;
 }
 
-.airPressure{
+.airPressure {
     font-size: small;
     left: 400px;
     top: 520px;
@@ -130,7 +134,7 @@
     top: 5px;
 }
 
-.visionTemperature {
+.rightCamTemperature {
     width: fit-content;
     left: 490px;
     top: 340px;
@@ -144,42 +148,27 @@
     z-index: 5;
 }
 
-/* .rightCamTemperature {
-    width: fit-content;
-    left: 820px;
-    top: 85px;
-    z-index: 5;
-} */
 
-/* .machine-top-data {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    color: white;
-    margin-top: 40px;
-    border-bottom: 1px white solid;
-    border-top: 1px white solid;
-} */
 .machine-top-data {
     width: 100%;
     display: flex;
-    justify-content: space-evenly; /* Space out elements */
+    justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap; /* Wrap to next line if needed */
-    gap: 20px; /* Space between boxes */
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 10px;
 }
 
-.machine-top-data > div {
-    background-color: #1b2531; /* Dark background for the boxes */
-    color: white; /* Text color */
+.machine-top-data>div {
+    background-color: #1b2531;
+    color: white;
     padding: 15px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Light shadow effect */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
-    min-width: 150px; /* Ensure proper box size */
-    flex: 1; /* Allow flexible width */
-    max-width: 250px; /* Avoid too-wide boxes */
+    min-width: 150px;
+    flex: 1;
+    max-width: 250px;
 }
 
 .sukaEjectScale {
@@ -247,75 +236,81 @@
 .icons1 div:hover{
     transform: scale(1.1);
 } */
- 
 
-.iconsFinal{
+.iconsFinal {
     display: none;
 }
 
-.imgConveyor, .imgVision, .imgMotor, .imgAirPressure{
+
+.imgConveyor,
+.imgVision,
+.imgMotor,
+.imgAirPressure {
     height: 60px;
     width: 60px;
 }
 
-.imgCpu, .imgGpu, .imgPanel, .imgCam{
+.imgCpu,
+.imgGpu,
+.imgPanel,
+.imgCam {
     height: 40px;
     width: 40px;
 }
 
-/* .conveyorIcon1{
+.conveyorIcon {
     position: absolute;
     left: 150px;
     top: -10px;
 }
 
-.cpuIcon1{
+.cpuIcon {
     position: absolute;
-    left: 435px;
-    top: 160px;
+    left: 415px;
+    top: 195px;
 }
 
-.gpuIcon1{
+.gpuIcon {
     position: absolute;
-    left: 489px;
-    top: 145px;
+    left: 459px;
+    top: 165px;
 }
 
-.panelIcon1{
+.panelIcon {
     position: absolute;
-    left: 540px;
-    top: 130px;
+    left: 500px;
+    top: 140px;
 }
 
-.leftCamIcon1{
+.leftCamIcon {
     position: absolute;
     left: 650px;
     top: 80px;
 }
 
-.rightCamIcon1{
+.rightCamIcon {
     position: absolute;
-    left: 720px;
+    left: 740px;
     top: 80px;
 }
 
-.motorIcon1{
+.motorIcon {
     position: absolute;
-    left: 640px;
-    top: 440px;
+    left: 800px;
+    top: 250px;
 }
 
-.visionIcon1{
+.visionIcon {
     position: absolute;
     left: 610px;
     top: 200px;
 }
 
-.airPressureIcon1{
+.airPressureIcon {
     position: absolute;
-    left: 480px;
-    top: 380px;
-} */
+    left: 490px;
+    top: 480px;
+}
 
 
 /* .conveyorIcon1{
@@ -371,37 +366,32 @@
     left: 480px;
     top: 480px;
 } */
-/* .icon-heading {
+.icon-heading {
     position: absolute;
     top: -10px;
     left: -2px;
     font-size: 14px;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: white;
     white-space: nowrap;
-} */
+}
 
-.eject-reject{
+.eject-reject {
     position: absolute;
     left: 10px;
     top: 500px;
     color: white;
     display: flex;
-    flex-wrap: wrap;  
-    gap: 10px; 
-    width: 90%; 
-    max-width: 320px; 
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 90%;
+    max-width: 320px;
     justify-content: center;
     z-index: 5;
     display: none;
-
-    /* border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px; 
-    padding: 15px; 
-    background: rgba(0, 0, 0, 0.3); 
-    backdrop-filter: blur(5px); */
 }
-.eject-reject span{
+
+.eject-reject span {
     /* font-size:xx-large; */
     margin-left: 10px;
 }
@@ -411,54 +401,14 @@
     transform: scaleX(-1);
 }
 
-/* .conveyorDot, .cpuDot, .gpuDot, .panelDot, .visionDot, .cameraDot, .airPressureDot, .motorDot{
-    position: absolute;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    top: 95px;
-    left: 140px;
-    z-index: 5;
-    transition: all 0.3s ease-in-out;
-}
-
-.cpuDot{
-    left: 440px;
-    top: 130px;
-}
-
-.gpuDot{
-    left: 490px;
-    top: 115px;
-}
-
-.panelDot{
-    left: 540px;
-    top: 100px;
-}
-
-.visionDot{
-    left: 580px;
-    top: 172px;
-}
-
-.cameraDot{
-    left: 680px;
-    top: 142px;
-}
-
-.airPressureDot{
-    left: 500px;
-    top: 300px;
-}
-
-.motorDot{
-    left: 625px;
-    top: 370px;
-} */
-
-
-.conveyorDot, .cpuDot, .gpuDot, .panelDot, .visionDot, .cameraDot, .airPressureDot, .motorDot{
+.conveyorDot,
+.cpuDot,
+.gpuDot,
+.panelDot,
+.visionDot,
+.cameraDot,
+.airPressureDot,
+.motorDot {
     position: absolute;
     height: 10px;
     width: 10px;
@@ -469,37 +419,37 @@
     transition: all 0.3s ease-in-out;
 }
 
-.cpuDot{
+.cpuDot {
     left: 435px;
     top: 250px;
 }
 
-.gpuDot{
+.gpuDot {
     left: 480px;
     top: 228px;
 }
 
-.panelDot{
+.panelDot {
     left: 525px;
     top: 200px;
 }
 
-.visionDot{
+.visionDot {
     left: 550px;
     top: 310px;
 }
 
-.cameraDot{
+.cameraDot {
     left: 640px;
     top: 262px;
 }
 
-.airPressureDot{
+.airPressureDot {
     left: 500px;
     top: 420px;
 }
 
-.motorDot{
+.motorDot {
     left: 805px;
     top: 320px;
 }
@@ -517,22 +467,24 @@
 }
 
 @keyframes glowWarning {
-    0%{
+    0% {
         box-shadow: 0 0 8px 2px rgb(238, 124, 17);
         transform: scale(1);
     }
-    100%{
+
+    100% {
         box-shadow: 0 0 10px 5px rgb(238, 124, 17);
         transform: scale(1.1);
     }
 }
 
 @keyframes glowError {
-    0%{
+    0% {
         box-shadow: 0 0 8px 2px red;
         transform: scale(1);
     }
-    100%{
+
+    100% {
         box-shadow: 0 0 10px 5px red;
         transform: scale(1.1);
     }
@@ -568,12 +520,15 @@
         top: 45px;
         visibility: visible;
     }
-    20%{
+
+    20% {
         visibility: hidden;
     }
-    60%{
+
+    60% {
         visibility: hidden;
     }
+
     100% {
         left: 800px;
         top: 400px;
@@ -587,12 +542,15 @@
         top: 80px;
         visibility: visible;
     }
-    20%{
+
+    20% {
         visibility: hidden;
     }
-    50%{
+
+    50% {
         visibility: hidden;
     }
+
     100% {
         left: 750px;
         top: 480px;
@@ -607,12 +565,15 @@
         z-index: 3;
         visibility: visible;
     }
-    22%{
+
+    22% {
         visibility: hidden;
     }
-    60%{
-        visibility:hidden ;
+
+    60% {
+        visibility: hidden;
     }
+
     100% {
         left: 520px;
         top: 245px;
@@ -627,12 +588,15 @@
         top: 55px;
         visibility: visible;
     }
-    22%{
+
+    22% {
         visibility: hidden;
     }
-    60%{
+
+    60% {
         visibility: hidden;
     }
+
     100% {
         left: 500px;
         top: 305px;
@@ -670,8 +634,6 @@
 .containner .imgContainner .suka {
     background-color: aqua;
     width: 1060px;
-    /* margin-top: -80px;
-    margin-left: -30px; */
     background-color: #1b2531;
     transition: transform 2s;
 }
@@ -756,7 +718,8 @@
         width: 700px;
         overflow: scroll;
     }
-    .containner .imgContainner{
+
+    .containner .imgContainner {
         margin-top: 15%;
     }
 
@@ -805,13 +768,16 @@
     .imgRoll4 {
         animation-delay: 4.8s;
     }
-    .imgRoll2{
+
+    .imgRoll2 {
         animation-delay: 3s;
     }
-    .imgRoll6{
+
+    .imgRoll6 {
         animation-delay: 3s;
     }
-    .eject-reject{
+
+    .eject-reject {
         position: absolute;
         left: 0px;
         top: 380px;
@@ -850,7 +816,7 @@
         top: 126px;
     }
 
-    .airPressure{
+    .airPressure {
         left: 200px;
         top: 320px;
     }
@@ -876,7 +842,7 @@
         top: 15px;
     }
 
-    .panelText tspan{
+    .panelText tspan {
         font-size: 12px;
     }
 
@@ -897,114 +863,136 @@
         padding: 10px;
     } */
 
-    .conveyorDot, .cpuDot, .gpuDot, .panelDot, .visionDot, .cameraDot, .airPressureDot, .motorDot{
+    .conveyorDot,
+    .cpuDot,
+    .gpuDot,
+    .panelDot,
+    .visionDot,
+    .cameraDot,
+    .airPressureDot,
+    .motorDot {
         height: 8px;
         width: 8px;
         top: 90px;
         left: 80px;
     }
 
-    .cpuDot{
+    .cpuDot {
         left: 285px;
         top: 170px;
     }
-    
-    .gpuDot{
+
+    .gpuDot {
         left: 320px;
         top: 150px;
     }
-    
-    .panelDot{
+
+    .panelDot {
         left: 348px;
         top: 135px;
     }
-    
-    .visionDot{
+
+    .visionDot {
         left: 360px;
         top: 200px;
     }
-    
-    .cameraDot{
+
+    .cameraDot {
         left: 420px;
         top: 168px;
     }
-    
-    .airPressureDot{
+
+    .airPressureDot {
         left: 335px;
         top: 275px;
     }
-    
-    .motorDot{
+
+    .motorDot {
         left: 535px;
-        top:215px;
+        top: 215px;
     }
-    .imgConveyor, .imgVision, .imgMotor, .imgAirPressure, .imgCam{
+
+    .imgConveyor,
+    .imgVision,
+    .imgMotor,
+    .imgAirPressure,
+    .imgCam {
         height: 40px;
         width: 40px;
     }
-    
-    .imgCpu, .imgGpu, .imgPanel{
-        height: 20px;
-        width: 20px;
+
+    .imgCpu,
+    .imgGpu,
+    .imgPanel {
+        height: 30px;
+        width: 30px;
     }
-    .conveyorIcon1{
-        left: 120px;
+
+
+    .conveyorIcon {
+        position: absolute;
+        left: 80px;
         top: -20px;
     }
-    
-    .cpuIcon1{
-        left: 290px;
-        top: 180px;
+
+    .cpuIcon {
+        position: absolute;
+        left: 265px;
+        top: 120px;
     }
-    
-    /* .gpuIcon1{
-        left: 320px;
-        top: 160px;
-    } */
-    
-    .panelIcon1{
-        left: 350px;
-        top: 145px;
+
+    .gpuIcon {
+        position: absolute;
+        left: 299px;
+        top: 105px;
     }
-    
-    .leftCamIcon1{
+
+    .panelIcon {
+        position: absolute;
+        left: 330px;
+        top: 95px;
+    }
+
+    .leftCamIcon {
+        position: absolute;
         left: 420px;
-        top: 100px;
+        top: 0px;
     }
-    
-    .rightCamIcon1{
+
+    .rightCamIcon {
+        position: absolute;
         left: 500px;
-        top: 100px;
+        top: 0px;
     }
-    
-    .motorIcon1{
-        left: 535px;
-        top: 165px;
+
+    .motorIcon {
+        position: absolute;
+        left: 530px;
+        top: 160px;
     }
-    
-    .visionIcon1{
+
+    .visionIcon {
+        position: absolute;
         left: 410px;
-        top: 220px;
+        top: 200px;
     }
-    
-    .airPressureIcon1{
+
+    .airPressureIcon {
+        position: absolute;
         left: 320px;
         top: 320px;
     }
 
-    .icon-heading{
-        font-size: 10px;
-    }
     /* .icons1 div img {
         width: 30px;
         height: 30px;
     } */
     .containner .machineDetails .imgContainner .box {
-        width: 199px;
-        height: 186px;
-        clip-path: polygon(33% 0, 101% 34%, 79% 52%, 81% 77%, 0 36%);
+        width: 220px;
+        height: 211px;
+        clip-path: polygon(40% 0, 97% 30%, 78% 44%, 83% 72%, 0 31%);
         top: 43px;
-        left: 85px;
+        left: 72px;
         rotate: 5deg;
         background-image: repeating-linear-gradient(90deg,
                 gray 0%,
@@ -1012,25 +1000,25 @@
                 transparent 10%,
                 transparent 20%);
     }
-    .containner .machineDetails .imgContainner .box2{
-        width: 150px; 
-        height: 100px; 
+
+    .containner .machineDetails .imgContainner .box2 {
+        width: 150px;
+        height: 100px;
         clip-path: polygon(62% 0, 93% 26%, 25% 85%, 0 51%);
         background-color: transparent;
         position: absolute;
-        top: 240px; 
-        left: 408px; 
-        background-image: repeating-linear-gradient(
-            90deg,
-            gray 0%,
-            gray 10%,
-            transparent 10%,
-            transparent 20%
-        );
+        top: 240px;
+        left: 408px;
+        background-image: repeating-linear-gradient(90deg,
+                gray 0%,
+                gray 10%,
+                transparent 10%,
+                transparent 20%);
     }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1200px) {
+
     /* .eject-reject{
         margin-top: 40px;
     } */
@@ -1055,7 +1043,7 @@
         width: 30px; 
         height: 30px;
     } */
-    .nonFiredCount{
+    .nonFiredCount {
         left: 500px;
     }
 }
@@ -1064,12 +1052,15 @@
     .containner .navbar {
         display: none;
     }
+
     .containner .machineDetails {
         padding-left: 0px;
     }
-    .nonFiredCount{
+
+    .nonFiredCount {
         left: 500px;
     }
+
     /* .icons1 {
         bottom: -240px; 
         left: -100px; 
@@ -1084,21 +1075,25 @@
         width: 30px; 
         height: 30px;
     } */
-    
+
 }
+
 @media screen and (width: 1024px) and (height: 600px) {
-    .containner .imgContainner .suka{
+    .containner .imgContainner .suka {
         position: absolute;
         left: -250px;
         top: -100px;
         width: 450px;
     }
+
     .containner .machineDetails .imgContainner .svgRes5 {
         display: none;
     }
+
     .containner .machineDetails .imgContainner .svgRes6 {
         display: block;
     }
+
     .gpuTemperature {
         top: -105px;
         left: 25px;
@@ -1119,7 +1114,7 @@
         top: -26px;
     }
 
-    .airPressure{
+    .airPressure {
         left: -100px;
         top: 92px;
     }
@@ -1138,7 +1133,15 @@
         left: 30px;
         top: -95px;
     }
-    .conveyorDot, .cpuDot, .gpuDot, .panelDot, .visionDot, .cameraDot, .airPressureDot, .motorDot{
+
+    .conveyorDot,
+    .cpuDot,
+    .gpuDot,
+    .panelDot,
+    .visionDot,
+    .cameraDot,
+    .airPressureDot,
+    .motorDot {
         height: 8px;
         width: 8px;
         top: -42px;
@@ -1146,53 +1149,55 @@
         background-color: red;
     }
 
-    .cpuDot{
+    .cpuDot {
         left: -65px;
         top: 8px;
     }
-    
-    .gpuDot{
+
+    .gpuDot {
         left: -45px;
         top: -2px;
     }
-    
-    .panelDot{
+
+    .panelDot {
         left: -25px;
         top: -13px;
     }
-    
-    .visionDot{
+
+    .visionDot {
         left: -15px;
         top: 28px;
     }
-    
-    .cameraDot{
+
+    .cameraDot {
         left: 18px;
         top: 8px;
     }
-    
-    .airPressureDot{
+
+    .airPressureDot {
         left: -35px;
         top: 80px;
     }
-    
-    .motorDot{
+
+    .motorDot {
         left: 95px;
         top: 35px;
     }
-    .eject-reject{
+
+    .eject-reject {
         position: absolute;
         top: -80px;
         left: 140px;
         display: block;
         border: 2px solid rgba(255, 255, 255, 0.5);
-        border-radius: 8px; 
-        background: rgba(0, 0, 0, 0.3); 
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(5px);
         width: 200px;
         display: flex;
         justify-content: flex-start;
     }
+
     .containner .machineDetails .imgContainner .box {
         width: 125px;
         height: 90px;
@@ -1205,74 +1210,92 @@
                 transparent 10%,
                 transparent 20%);
     }
-    .containner .machineDetails .imgContainner .box2{
-        width: 125px; 
-        height: 62px; 
+
+    .containner .machineDetails .imgContainner .box2 {
+        width: 125px;
+        height: 62px;
         clip-path: polygon(50% 0, 70% 20%, 18% 81%, 0 62%);
         background-color: transparent;
         position: absolute;
-        top: 53px; 
-        left: 8px; 
-        background-image: repeating-linear-gradient(
-            90deg,
-            gray 0%,
-            gray 10%,
-            transparent 10%,
-            transparent 20%
-        );
+        top: 53px;
+        left: 8px;
+        background-image: repeating-linear-gradient(90deg,
+                gray 0%,
+                gray 10%,
+                transparent 10%,
+                transparent 20%);
     }
-    .imgRoll1, .imgRoll2, .imgRoll3, .imgRoll4, .imgRoll5, .imgRoll6, .imgRoll7, .imgRoll8{
+
+    .imgRoll1,
+    .imgRoll2,
+    .imgRoll3,
+    .imgRoll4,
+    .imgRoll5,
+    .imgRoll6,
+    .imgRoll7,
+    .imgRoll8 {
         left: -175px;
         top: -65px;
         height: 20px;
         z-index: 10;
-        animation: rollImgres4  10s infinite;
+        animation: rollImgres4 10s infinite;
     }
-    .imgRoll2{
+
+    .imgRoll2 {
         animation-delay: 2s;
     }
-    .imgRoll3{
+
+    .imgRoll3 {
         animation-delay: 2.8s;
     }
-    .imgRoll4{
+
+    .imgRoll4 {
         animation-delay: 3.6s;
     }
-    .imgRoll5{
+
+    .imgRoll5 {
         animation-delay: 4.2s;
     }
-    .imgRoll6{
+
+    .imgRoll6 {
         animation-delay: 5.2s;
     }
-    .imgRoll7{
+
+    .imgRoll7 {
         animation-delay: 6s;
     }
-    .imgRoll8{
+
+    .imgRoll8 {
         animation-delay: 6.8s;
     }
-  }
-  @keyframes rollImgres4 {
-    0%{
+}
+
+@keyframes rollImgres4 {
+    0% {
         left: -175px;
         top: -65px;
     }
-    20%{
+
+    20% {
         visibility: hidden;
     }
-    55%{
+
+    55% {
         visibility: hidden;
     }
-    100%{
+
+    100% {
         left: 70px;
         top: 80px;
     }
-  }
+}
 
 
 @media screen and (max-width: 700px) {
     .containner .imgContainner {
         width: 100%;
     }
-    
+
     .containner .navbar {
         display: none;
     }
@@ -1288,7 +1311,7 @@
     .containner .machineDetails .machineInfo {
         flex-direction: column;
     }
-   
+
     .leftCamTemperature {
         width: 10px;
         left: 400px;
@@ -1298,6 +1321,7 @@
     .rightCamTemperature {
         top: 3px;
     }
+
     /* .icons1 {
         position: absolute;
         bottom: -50px;
@@ -1331,43 +1355,48 @@
         width: 40px;
         height: 40px;
     } */
-    
+
 }
 
-@media screen and (min-width:300px) and (max-width:500px){
-    .containner .imgContainner .suka{
-        width: 300px; 
+@media screen and (min-width:300px) and (max-width:500px) {
+    .containner .imgContainner .suka {
+        width: 300px;
         margin-left: 10%;
     }
+
     .containner .machineDetails .imgContainner .svgRes5 {
         display: none;
     }
-    .containner .imgContainner{
+
+    .containner .imgContainner {
         height: fit-content;
         position: relative;
         margin-bottom: 0px;
     }
+
     .machine-top-data {
         display: flex;
-        flex-wrap: nowrap; 
-        justify-content: space-between; 
+        flex-wrap: nowrap;
+        justify-content: space-between;
         align-items: center;
-        gap: 5px; 
+        gap: 5px;
         padding: 5px;
     }
 
-    .machine-top-data > div {
-        width: 20%; 
-        min-width: 70px; 
-        padding: 5px; 
+    .machine-top-data>div {
+        width: 20%;
+        min-width: 70px;
+        padding: 5px;
         text-align: center;
         border-radius: 5px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); 
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     }
-    .svgRes3{
+
+    .svgRes3 {
         margin-left: 10%;
         display: block !important;
     }
+
     .containner .machineDetails .imgContainner .box {
         width: 85px;
         height: 110px;
@@ -1380,26 +1409,34 @@
                 transparent 10%,
                 transparent 20%);
     }
-    .containner .machineDetails .imgContainner .box2{
-        width: 75px; 
-        height: 48px; 
+
+    .containner .machineDetails .imgContainner .box2 {
+        width: 75px;
+        height: 48px;
         clip-path: polygon(62% 0, 93% 26%, 25% 85%, 0 51%);
         background-color: transparent;
         position: absolute;
-        top: 100px; 
-        left: 208px; 
-        background-image: repeating-linear-gradient(
-            90deg,
-            gray 0%,
-            gray 10%,
-            transparent 10%,
-            transparent 20%
-        );
+        top: 100px;
+        left: 208px;
+        background-image: repeating-linear-gradient(90deg,
+                gray 0%,
+                gray 10%,
+                transparent 10%,
+                transparent 20%);
     }
-    .conveyorDot, .cpuDot, .gpuDot, .panelDot, .visionDot, .cameraDot, .motorDot, .airPressureDot{
-         display: none;
+
+    .conveyorDot,
+    .cpuDot,
+    .gpuDot,
+    .panelDot,
+    .visionDot,
+    .cameraDot,
+    .motorDot,
+    .airPressureDot,
+    .cpuIcon, .conveyorIcon, .gpuIcon, .panelIcon, .motorIcon, .leftCamIcon, .rightCamIcon, .motorIcon, .airPressureIcon {
+        display: none;
     }
-    
+
     .imgRoll1,
     .imgRoll2,
     .imgRoll3,
@@ -1415,61 +1452,74 @@
         animation: rollImgres3 10s infinite;
         /* visibility: hidden; */
     }
-    .imgRoll2{
+
+    .imgRoll2 {
         animation-delay: 1s;
     }
-    .imgRoll3{
+
+    .imgRoll3 {
         animation-delay: 3s;
     }
-    .imgRoll4{
+
+    .imgRoll4 {
         animation-delay: 6s;
     }
-    .imgRoll8{
+
+    .imgRoll8 {
         animation-delay: 9s;
     }
-    .imgRoll5{
+
+    .imgRoll5 {
         animation-delay: 12s;
     }
-    .imgRoll6{
+
+    .imgRoll6 {
         animation-delay: 15s;
     }
-    .imgRoll7{
+
+    .imgRoll7 {
         animation-delay: 18s;
     }
-    .eject-reject{
+
+    .eject-reject {
         position: absolute;
         top: -30px;
         left: 20px;
         display: block;
     }
-    .eject{
+
+    .eject {
         position: absolute;
         top: 160px;
         left: -10px;
         border: 2px solid rgba(255, 255, 255, 0.5);
-        border-radius: 8px; 
-        background: rgba(0, 0, 0, 0.3); 
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(5px);
         width: 120px;
         display: flex;
         justify-content: flex-start;
     }
-    .reject{
+
+    .reject {
         position: absolute;
         left: 185px;
         top: 40px;
         border: 2px solid rgba(255, 255, 255, 0.5);
-        border-radius: 8px; 
-        background: rgba(0, 0, 0, 0.3); 
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(5px);
         width: 148px;
         display: flex;
         justify-content: flex-start;
     }
-    .reject span, .eject span{
+
+    .reject span,
+    .eject span {
         font-size: 15px;
     }
-    .iconsFinal{
+
+    .iconsFinal {
         width: 100%;
         margin-top: 20px;
         display: flex;
@@ -1478,34 +1528,58 @@
         align-items: center;
         gap: 20px;
     }
-    .iconsFinal > div {
-        width: calc(25% - 20px); 
+
+    .iconsFinal>div {
+        width: calc(25% - 20px);
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    .icon-heading{
+    .cpuIcon1 span, .gpuIcon1 span{
+        margin-left: 8px;
+    }
+    .icon-heading {
         position: relative;
         top: 0px;
         font-size: 15px;
         color: white;
     }
-    .conveyorIcon1, .cpuIcon1, .gpuIcon1, .panelIcon1, .airPressureIcon1, .motorIcon1, .leftCamIcon1, .visionIcon1, .rightCamIcon1{
+
+    .conveyorIcon1,
+    .cpuIcon1,
+    .gpuIcon1,
+    .panelIcon1,
+    .airPressureIcon1,
+    .motorIcon1,
+    .leftCamIcon1,
+    .visionIcon1,
+    .rightCamIcon1 {
         width: 60px;
         height: 60px;
     }
-    .iconsFinal p{
+
+    .iconsFinal p {
         color: white;
         font-size: 15px;
     }
-    .imgConveyor, .imgCpu, .imgGpu, .imgPanel, .imgVision, .imgCam, .imgAirPressure, .imgMotor{
+
+    .imgConveyor,
+    .imgCpu,
+    .imgGpu,
+    .imgPanel,
+    .imgVision,
+    .imgCam,
+    .imgAirPressure,
+    .imgMotor {
         height: 30px;
         width: 30px;
     }
-    .imgConveyor{
+
+    .imgConveyor {
         margin-left: 10px;
     }
+
     .firedCount,
     .nonFiredCount,
     .cpuTemperature,
@@ -1521,17 +1595,20 @@
 }
 
 @keyframes rollImgres3 {
-    0%{
+    0% {
         left: 75px;
         top: 10px;
     }
-    20%{
+
+    20% {
         visibility: hidden;
     }
-    65%{
+
+    65% {
         visibility: hidden;
     }
-    100%{
+
+    100% {
         left: 240px;
         top: 110px;
     }
@@ -1557,41 +1634,37 @@
 
 
 .box {
-    width: 380px; 
-    height: 240px; 
-    clip-path: polygon(37% 0, 85% 48%, 68% 69%, 69% 98%, 0 40%);
+    width: 383px;
+    height: 237px;
+    clip-path: polygon(38% 0, 87% 46%, 69% 63%, 69% 100%, 0 34%);
 
     background-color: transparent;
     position: absolute;
-    top: 60px; 
-    left: 108px; 
-    background-image: repeating-linear-gradient(
-        90deg,
-        gray 0%,
-        gray 10%,
-        transparent 10%,
-        transparent 20%
-    );
+    top: 68px;
+    left: 108px;
+    background-image: repeating-linear-gradient(90deg,
+            gray 0%,
+            gray 10%,
+            transparent 10%,
+            transparent 20%);
     background-size: 30px 100%;
     animation: moveDashes 1s linear infinite;
     z-index: 2;
 }
 
-.box2{
-    width: 250px; 
-    height: 150px; 
+.box2 {
+    width: 250px;
+    height: 150px;
     clip-path: polygon(62% 0, 88% 26%, 26% 82%, 0 57%);
     background-color: transparent;
     position: absolute;
-    top: 360px; 
-    left: 608px; 
-    background-image: repeating-linear-gradient(
-        90deg,
-        gray 0%,
-        gray 10%,
-        transparent 10%,
-        transparent 20%
-    );
+    top: 360px;
+    left: 608px;
+    background-image: repeating-linear-gradient(90deg,
+            gray 0%,
+            gray 10%,
+            transparent 10%,
+            transparent 20%);
     background-size: 30px 100%;
     animation: moveDashes 1s linear infinite;
     z-index: 2;
@@ -1608,7 +1681,7 @@
 
 
 
-.svgRes4{
+.svgRes4 {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1616,7 +1689,8 @@
     height: 714px;
     z-index: 3;
 }
-.svgRes5{
+
+.svgRes5 {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1625,7 +1699,8 @@
     z-index: 3;
     display: none;
 }
-.svgRes6{
+
+.svgRes6 {
     position: absolute;
     left: -250px;
     top: -100px;
@@ -1634,6 +1709,7 @@
     z-index: 3;
     display: none;
 }
+
 /* .svgRes2 {
     position: absolute;
     top: 0px;
@@ -1652,12 +1728,10 @@
     z-index: 3;
     display: none;
 }
+
 .poly {
     transition: stroke 0.5s ease-in-out, stroke-width 0.5s, fill 0.5s;
     animation: moveDashes 2s linear infinite;
-    stroke: rgb(0, 255, 0);
-    stroke-width: 2px;
-    
 }
 
 .poly:hover {
@@ -1666,22 +1740,47 @@
 
 .polyError {
     transition: stroke 0.5s ease-in-out, stroke-width 0.5s, fill 0.5s;
-    animation: moveDashes 2s linear infinite;
-    stroke: rgb(255, 0, 0);
-    stroke-width: 2px;
+    /* stroke: rgb(255, 0, 0);
+    stroke-width: 2px; */
 }
 
-.polyWarning{
+.polyWarning {
     transition: stroke 0.5s ease-in-out, stroke-width 0.5s, fill 0.5s;
-    animation: moveDashes 2s linear infinite;
-    stroke: rgb(238, 124, 17);
-    stroke-width: 4px;
+    /* stroke: rgb(238, 124, 17);
+    stroke-width: 4px; */
 }
 
 .machineStop {
     transition: stroke 0.5s ease-in-out, stroke-width 0.5s, fill 0.5s;
-    stroke: white;
-    stroke-width: 2px;
+    /* stroke: white;
+    stroke-width: 2px; */
+}
+
+.iconWarning{
+    animation: warningBlink 0.6s ease-in-out infinite;
+}
+.iconError{
+    animation: errorBlink 0.4s ease-in-out infinite;
+}
+
+@keyframes warningBlink {
+    0% {
+        scale: 0.8;
+    }
+
+    100% {
+        scale: 1.2;
+    }
+}
+
+@keyframes errorBlink {
+    0% {
+        scale: 0.8;
+    }
+
+    100% {
+        scale: 1.2;
+    }
 }
 
 @keyframes moveDashes {
